@@ -100,3 +100,16 @@
 
 ---
 
+# Quaternary Table: Biggest Catch
+-	Shows the biggest fish that the user caught during that trip
+
+### Example Quaternary Table
+| Date of Trip | Weight of Heaviest Fish | Length of Longest Fish | Standard for Master Angler (Weight) | Standard for Master Angler (Length) | Username | Location |
+|--------------|-------------------------|------------------------|-------------------------------------|-------------------------------------|----------|----------|
+| 20JAN21 | 2.1 | 11 | N/A | 24 | joeslee | Monument Lake |
+
+### Quaternary Table Description
+4. Information that informs the user if a fish they caught that day met master angler standards for Colorado
+- https://www.fishexplorer.com/masterangler.asp
+- Foreign keys
+  - Username and Location
