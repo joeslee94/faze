@@ -1,8 +1,6 @@
 # Faze
 ## Fishing application in development for the adventerous
 
----
-
 Joe Lee
 MSSA CAD
 26JAN21
