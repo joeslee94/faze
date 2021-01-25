@@ -28,22 +28,13 @@ joeslee  |20JAN21|    1200   |  Bait Fishing	 |Monument Lake|      8       |    
     - 0.5 = 30 min
     - 0.25 = 15 min
     - 0 = 0 min
-o	Moon phase as it affects the tide
-	Automatically inputted by the system by creating a recursive loop
-•	New moon (NM)
-•	Waxing crescent (WXC)
-•	First quarter (1Q)
-•	Waxing gibbous (WXG)
-•	Full moon (FM)
-•	Waning gibbous (WAG)
-•	Third quarter (3Q)
-•	Waning crescent (WAC)
-o	Season of fishing
-	Dropdown menu
-•	Winter (Win)
-•	Spring (Spr)
-•	Summer (Sum)
-•	Fall (Fal)
-o	Avg Temp of Trip
-	Either in freedom units or Celsius
-	Most likely Celsius
+- Moon phase as it affects the tide
+  - Automatically inputted by the system by creating a recursive loop
+    - New moon (NM)
+    - Waxing crescent (WXC), First quarter (1Q), Waxing gibbous (WXG)
+    - Full moon (FM)
+    - Waning gibbous (WAG), Third quarter (3Q), Waning crescent (WAC)
+- Season of fishing
+  - Dropdown menu: Winter (Win), Spring (Spr), Summer (Sum), Fall (Fal)
+- Avg Temp of Trip
+  - Either in freedom units or Celsius
