@@ -75,10 +75,8 @@
 - Length of fish
   - Measured in in
   - Decimal value up to 2 decimal points
-- Username
-  - Foreign key
-- Location
-  - Foreign key
+- Foreign keys
+  - Username and Location
 
 ---
 
@@ -96,12 +94,9 @@
 -	Number of bites that they got
 -	Number of fish caught
 -	Total number of bait used
--	Overall comments
-  - Limit the comments to 1000 chars.
--	Username
-  - Foreign key
--	Location
-  - Foreign key
+-	Overall comments: Limit the comments to 1000 chars.
+- Foreign keys
+  - Username and Location
 
 ---
 
