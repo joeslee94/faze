@@ -1,7 +1,6 @@
 # Faze
 ## Fishing application in development for the adventerous
 
-<style> Joe Lee {text-align: right}</style>
 <div style="text-align: right"> Joe Lee </div>
 <div style="text-align: right"> MSSA CAD </div>
 <div style="text-align: right"> 26JAN21 </div>
