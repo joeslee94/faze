@@ -1,11 +1,9 @@
 # Faze
 ## Fishing application in development for the adventerous
 
-Joe Lee
-MSSA CAD
-26JAN21
-
----
+#### Joe Lee
+#### MSSA CAD
+#### 26JAN21
 
 ### Faze (Waze for fishing)
 Fishing is a sport enjoyed by a wealth of people across the United States. Colorado is a phenomenal state that funds its Parks and Wildlife programs extremely well. From restocking fish to ensuring that the fish are healthy within the state’s bodies of water, Colorado’s department for Parks and Wildlife is extremely active. This allows all fishermen and fisherwomen, from novice to professional, to enjoy the activity. This application will enable all participants to enhance their fishing experience by having a historical database that will allow them to prepare adequately for future trips.
