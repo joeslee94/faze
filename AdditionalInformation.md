@@ -4,4 +4,4 @@
 ### Example Primary Table
 Username | Date | Time Start | Type of Fishing | Location | Total # of Fish | Hours Spent Fishing | Moon Phase | Season | AVG Temp |
 ---------|------|------------|-----------------|----------|-----------------|---------------------|------------|--------|----------|
-joeslee  |20JAN21|    1200   |  Bait Fishing	 |Monument Lake|      8       |          5          | WXC        | Winter | 32oF/0oC |
+joeslee  |20JAN21|    1200   |  Bait Fishing	 |Monument Lake|      8       |          5          | WXC        | Winter | 32F / 0C |
