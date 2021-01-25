@@ -10,9 +10,8 @@ joeslee  |20JAN21|    1200   |  Bait Fishing	 |Monument Lake|      8       |    
 1. Key information that must be entered in:
 - Username
   - Alphanumerical values capped at 20 characters
-o	Date of fishing trip
-	Day Month Year Format
-•	20JAN21
+- Date of fishing trip
+  - Day Month Year Format: 20JAN21
 o	Time started fishing
 	24-hour format 0000-2359
 o	Type of fishing
