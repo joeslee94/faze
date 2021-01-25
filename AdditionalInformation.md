@@ -57,3 +57,27 @@ Fish # | Type of Fish | Type of Bait/Lure Used | Color of Lure Used | Rod Used |
 | 6 | Rainbow Trout | Waxworm  | Pink | Cabela’s       | 1600 | N/A | N/A | N/A | joeslee | Monument Lake |
 | 7 | Rainbow Trout | Waxworm  | Lime Green | Cabela’s | 1605 | N/A | 9.5 | N/A | joeslee | Monument Lake |
 | 8 | Rainbow Trout | Waxworm  | Neon Pink | Cabela’s  | 1633 | 1   | 9   | N/A | joeslee | Monument Lake |
+
+### Secondary Table Description
+2. Information that helps identify more specifically the fish caught during the trip
+- Type of Bait/Lure Used
+  - Allow the user to enter in a string char limit of 50
+- Color of Lure Used
+  - If a lure was used, what color was it
+- Rod Used
+  - Allow use to enter in a string char limit of 50
+- Time caught
+  - 24-hour format 0000-2359
+- Weight of fish
+  - Measured in lbs
+  - Decimal value up to 2 decimal points
+- Length of fish
+  - Measured in in
+  - Decimal value up to 2 decimal points
+- Username
+  - Foreign key
+- Location
+  - Foreign key
+
+---
+
