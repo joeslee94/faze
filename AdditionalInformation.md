@@ -8,33 +8,33 @@ joeslee  |20JAN21|    1200   |  Bait Fishing	 |Monument Lake|      8       |    
 
 ### Primary Table Description
 1. Key information that must be entered in:
-- Username
-  - Alphanumerical values capped at 20 characters
-- Date of fishing trip
-  - Day Month Year Format: 20JAN21
-- Time started fishing
-  - 24-hour format: 0000-2359
-- Type of fishing
-  - Drop down menu: bait, fly, bait casting, spinning, trolling
-- Location of where they fished
-  - Longitude or latitude OR
-  - General area such as Monument Lake
-- Total # of fish caught
-  - This will be an integer value greater or equal to 0
-- Hours spent fishing
-  - This will be an approximate value that is expressed as a decimal
-    - 1 = 1 hour
-    - 0.75 = 45 min
-    - 0.5 = 30 min
-    - 0.25 = 15 min
-    - 0 = 0 min
-- Moon phase as it affects the tide
-  - Automatically inputted by the system by creating a recursive loop
-    - New moon (NM)
-    - Waxing crescent (WXC), First quarter (1Q), Waxing gibbous (WXG)
-    - Full moon (FM)
-    - Waning gibbous (WAG), Third quarter (3Q), Waning crescent (WAC)
-- Season of fishing
-  - Dropdown menu: Winter (Win), Spring (Spr), Summer (Sum), Fall (Fal)
-- Avg Temp of Trip
-  - Either in freedom units or Celsius
+  - Username
+    - Alphanumerical values capped at 20 characters
+  - Date of fishing trip
+    - Day Month Year Format: 20JAN21
+  - Time started fishing
+    - 24-hour format: 0000-2359
+  - Type of fishing
+    - Drop down menu: bait, fly, bait casting, spinning, trolling
+  - Location of where they fished
+    - Longitude or latitude OR
+    - General area such as Monument Lake
+  - Total # of fish caught
+    - This will be an integer value greater or equal to 0
+  - Hours spent fishing
+    - This will be an approximate value that is expressed as a decimal
+      - 1 = 1 hour
+      - 0.75 = 45 min
+      - 0.5 = 30 min
+      - 0.25 = 15 min
+      - 0 = 0 min
+  - Moon phase as it affects the tide
+    - Automatically inputted by the system by creating a recursive loop
+      - New moon (NM)
+      - Waxing crescent (WXC), First quarter (1Q), Waxing gibbous (WXG)
+      - Full moon (FM)
+      - Waning gibbous (WAG), Third quarter (3Q), Waning crescent (WAC)
+  - Season of fishing
+    - Dropdown menu: Winter (Win), Spring (Spr), Summer (Sum), Fall (Fal)
+  - Avg Temp of Trip
+    - Either in freedom units or Celsius
