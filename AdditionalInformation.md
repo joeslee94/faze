@@ -4,7 +4,7 @@
 ### Example Primary Table
 Username | Date | Time Start | Type of Fishing | Location | Total # of Fish | Hours Spent Fishing | Moon Phase | Season | AVG Temp |
 ---------|------|------------|-----------------|----------|-----------------|---------------------|------------|--------|----------|
-joeslee  |20JAN21|    1200   |  Bait Fishing	 |Monument Lake|      8       |          5          | WXC        | Winter | 32F / 0C |
+|joeslee | 20JAN21 | 1200 | Bait Fishing | Monument Lake | 8 | 5 | WXC | Winter | 32F / 0C |
 
 ### Primary Table Description
 1. Key information that must be entered in:
@@ -38,3 +38,22 @@ joeslee  |20JAN21|    1200   |  Bait Fishing	 |Monument Lake|      8       |    
     - Dropdown menu: Winter (Win), Spring (Spr), Summer (Sum), Fall (Fal)
   - Avg Temp of Trip
     - Either in freedom units or Celsius
+
+---
+
+# Secondary Table: Types of Fish Caught
+-	A more specific look at the fish that were caught during the trip
+-	Primary key will be a composite of fish # and type of fish
+-	Username and location will be foreign keys
+
+### Example Secondary Table
+Fish # | Type of Fish | Type of Bait/Lure Used | Color of Lure Used | Rod Used | Time Caught | Weight of fish (lbs) | Length of Fish (in) | Picture | Username | Location |
+-------|--------------|------------------------|--------------------|----------|-------------|----------------------|---------------------|---------|----------|----------|
+| 1 | Rainbow Trout | Mealworm | Gold | Cabela’s | 1205 | 1.1 | 10 | joeslee | Monument Lake |
+| 2 | Rainbow Trout | Mealworm | Gold | Cabela’s | 1205 | 1.1 | 10 | joeslee | Monument Lake |
+| 3 | Rainbow Trout | Mealworm | Gold | Cabela’s | 1205 | 1.1 | 10 | joeslee | Monument Lake |
+| 4 | Rainbow Trout | Mealworm | Gold | Cabela’s | 1205 | 1.1 | 10 | joeslee | Monument Lake |
+| 5 | Rainbow Trout | Mealworm | Gold | Cabela’s | 1205 | 1.1 | 10 | joeslee | Monument Lake |
+| 6 | Rainbow Trout | Mealworm | Gold | Cabela’s | 1205 | 1.1 | 10 | joeslee | Monument Lake |
+| 7 | Rainbow Trout | Mealworm | Gold | Cabela’s | 1205 | 1.1 | 10 | joeslee | Monument Lake |
+| 8 | Rainbow Trout | Mealworm | Gold | Cabela’s | 1205 | 1.1 | 10 | joeslee | Monument Lake |
