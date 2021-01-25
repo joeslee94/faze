@@ -1,9 +1,10 @@
 # Primary Table: Overall Fishing Trip Summary
 -	Summary of the trip
 -	Primary key will be a username that the user will make
+
 ### Example Primary Table
-Username | Date | Time Start | Type of Fishing | Location | Total # of Fish | Hours Spent Fishing | Moon Phase | Season | AVG Temp |
----------|------|------------|-----------------|----------|-----------------|---------------------|------------|--------|----------|
+| Username | Date | Time Start | Type of Fishing | Location | Total # of Fish | Hours Spent Fishing | Moon Phase | Season | AVG Temp |
+|----------|------|------------|-----------------|----------|-----------------|---------------------|------------|--------|----------|
 |joeslee | 20JAN21 | 1200 | Bait Fishing | Monument Lake | 8 | 5 | WXC | Winter | 32F / 0C |
 
 ### Primary Table Description
@@ -47,8 +48,8 @@ Username | Date | Time Start | Type of Fishing | Location | Total # of Fish | Ho
 -	Username and location will be foreign keys
 
 ### Example Secondary Table
-Fish # | Type of Fish | Type of Bait/Lure Used | Color of Lure Used | Rod Used | Time Caught | Weight of fish (lbs) | Length of Fish (in) | Picture | Username | Location |
--------|--------------|------------------------|--------------------|----------|-------------|----------------------|---------------------|---------|----------|----------|
+| Fish # | Type of Fish | Type of Bait/Lure Used | Color of Lure Used | Rod Used | Time Caught | Weight of fish (lbs) | Length of Fish (in) | Picture | Username | Location |
+|--------|--------------|------------------------|--------------------|----------|-------------|----------------------|---------------------|---------|----------|----------|
 | 1 | Rainbow Trout | Mealworm | Gold | Cabela’s       | 1205 | 1.1 | 10  | N/A | joeslee | Monument Lake |
 | 2 | Rainbow Trout | Mealworm | Gold | Cabela’s       | 1300 | 1   | 9   | N/A | joeslee | Monument Lake |
 | 3 | Rainbow Trout | Mealworm | Gold | Cabela’s       | 1306 | N/A | N/A | N/A | joeslee | Monument Lake |
@@ -81,3 +82,23 @@ Fish # | Type of Fish | Type of Bait/Lure Used | Color of Lure Used | Rod Used |
 
 ---
 
+# Tertiary Table: Bites and Catches
+-	Summary of the bites and from those bites how many were caught
+-	Also shows how much (of which) bait was used so that the user can prepare for the next trip
+
+### Example Tertiary Table
+| Date of Trip | # of Bites | Total # of Fish Caught | Total # of bait used | Overall Comments | Username | Location |
+|--------------|------------|------------------------|----------------------|------------------|----------|----------|
+| 20JAN21 | 20 | 8 | 30 | Extremely cold on the lake due to the wind chill. Bring shelter for next trip. | joeslee | Monument Lake |
+
+### Tertiary Table Description
+3. Information that gives the user information for the next trip
+-	# of bites that they got
+-	# of fish caught
+-	Total # of bait used
+-	Overall comments
+  - Limit the comments to 1000 chars.
+-	Username
+  - Foreign key
+-	Location
+  - Foreign key
