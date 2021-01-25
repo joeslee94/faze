@@ -49,11 +49,11 @@ Username | Date | Time Start | Type of Fishing | Location | Total # of Fish | Ho
 ### Example Secondary Table
 Fish # | Type of Fish | Type of Bait/Lure Used | Color of Lure Used | Rod Used | Time Caught | Weight of fish (lbs) | Length of Fish (in) | Picture | Username | Location |
 -------|--------------|------------------------|--------------------|----------|-------------|----------------------|---------------------|---------|----------|----------|
-| 1 | Rainbow Trout | Mealworm | Gold | Cabela’s | 1205 | 1.1 | 10 | joeslee | Monument Lake |
-| 2 | Rainbow Trout | Mealworm | Gold | Cabela’s | 1205 | 1.1 | 10 | joeslee | Monument Lake |
-| 3 | Rainbow Trout | Mealworm | Gold | Cabela’s | 1205 | 1.1 | 10 | joeslee | Monument Lake |
-| 4 | Rainbow Trout | Mealworm | Gold | Cabela’s | 1205 | 1.1 | 10 | joeslee | Monument Lake |
-| 5 | Rainbow Trout | Mealworm | Gold | Cabela’s | 1205 | 1.1 | 10 | joeslee | Monument Lake |
-| 6 | Rainbow Trout | Mealworm | Gold | Cabela’s | 1205 | 1.1 | 10 | joeslee | Monument Lake |
-| 7 | Rainbow Trout | Mealworm | Gold | Cabela’s | 1205 | 1.1 | 10 | joeslee | Monument Lake |
-| 8 | Rainbow Trout | Mealworm | Gold | Cabela’s | 1205 | 1.1 | 10 | joeslee | Monument Lake |
+| 1 | Rainbow Trout | Mealworm | Gold | Cabela’s       | 1205 | 1.1 | 10  | N/A | joeslee | Monument Lake |
+| 2 | Rainbow Trout | Mealworm | Gold | Cabela’s       | 1300 | 1   | 9   | N/A | joeslee | Monument Lake |
+| 3 | Rainbow Trout | Mealworm | Gold | Cabela’s       | 1306 | N/A | N/A | N/A | joeslee | Monument Lake |
+| 4 | Rainbow Trout | Waxworm  | Gold | Cabela’s       | 1340 | 2   | 12  | N/A | joeslee | Monument Lake |
+| 5 | Rainbow Trout | Waxworm  | Gold | Cabela’s       | 1455 | 2.1 | 11  | N/A | joeslee | Monument Lake |
+| 6 | Rainbow Trout | Waxworm  | Pink | Cabela’s       | 1600 | N/A | N/A | N/A | joeslee | Monument Lake |
+| 7 | Rainbow Trout | Waxworm  | Lime Green | Cabela’s | 1605 | N/A | 9.5 | N/A | joeslee | Monument Lake |
+| 8 | Rainbow Trout | Waxworm  | Neon Pink | Cabela’s  | 1633 | 1   | 9   | N/A | joeslee | Monument Lake |
