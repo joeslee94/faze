@@ -12,27 +12,22 @@ joeslee  |20JAN21|    1200   |  Bait Fishing	 |Monument Lake|      8       |    
   - Alphanumerical values capped at 20 characters
 - Date of fishing trip
   - Day Month Year Format: 20JAN21
-o	Time started fishing
-	24-hour format 0000-2359
-o	Type of fishing
-	Drop down menu
-•	bait fishing
-•	fly-fishing
-•	bait casting
-•	spinning
-•	trolling.
-o	Location of where they fished
-	Longitude or latitude
-	General area such as Monument Lake
-o	Total # of fish caught
-	This will be an integer value greater or equal to 0
-o	Hours spent fishing
-	This will be an approximate value that is expressed as a decimal
-•	1 = 1 hour
-•	0.75 = 45 min
-•	0.5 = 30 min
-•	0.25 = 15 min
-•	0 = 0 min
+- Time started fishing
+  - 24-hour format: 0000-2359
+- Type of fishing
+  - Drop down menu: bait, fly, bait casting, spinning, trolling
+- Location of where they fished
+  - Longitude or latitude OR
+  - General area such as Monument Lake
+- Total # of fish caught
+  - This will be an integer value greater or equal to 0
+- Hours spent fishing
+  - This will be an approximate value that is expressed as a decimal
+    - 1 = 1 hour
+    - 0.75 = 45 min
+    - 0.5 = 30 min
+    - 0.25 = 15 min
+    - 0 = 0 min
 o	Moon phase as it affects the tide
 	Automatically inputted by the system by creating a recursive loop
 •	New moon (NM)
