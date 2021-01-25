@@ -87,15 +87,15 @@
 -	Also shows how much (of which) bait was used so that the user can prepare for the next trip
 
 ### Example Tertiary Table
-| Date of Trip | # of Bites | Total # of Fish Caught | Total # of bait used | Overall Comments | Username | Location |
-|--------------|------------|------------------------|----------------------|------------------|----------|----------|
+| Date of Trip | Number of Bites | Total number of Fish Caught | Total number of bait used | Overall Comments | Username | Location |
+|--------------|-----------------|-----------------------------|---------------------------|------------------|----------|----------|
 | 20JAN21 | 20 | 8 | 30 | Extremely cold on the lake due to the wind chill. Bring shelter for next trip. | joeslee | Monument Lake |
 
 ### Tertiary Table Description
 3. Information that gives the user information for the next trip
--	# of bites that they got
--	# of fish caught
--	Total # of bait used
+-	Number of bites that they got
+-	Number of fish caught
+-	Total number of bait used
 -	Overall comments
   - Limit the comments to 1000 chars.
 -	Username
