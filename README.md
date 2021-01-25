@@ -1,11 +1,12 @@
 # Faze
 ## Fishing application in development for the adventerous
 
+<style> Joe Lee {text-align: right}</style>
 <div style="text-align: right"> Joe Lee </div>
 <div style="text-align: right"> MSSA CAD </div>
 <div style="text-align: right"> 26JAN21 </div>
 
-### Faze (Waze for fishing)
+## Faze (Waze for fishing)
 Fishing is a sport enjoyed by a wealth of people across the United States. Colorado is a phenomenal state that funds its Parks and Wildlife programs extremely well. From restocking fish to ensuring that the fish are healthy within the state’s bodies of water, Colorado’s department for Parks and Wildlife is extremely active. This allows all fishermen and fisherwomen, from novice to professional, to enjoy the activity. This application will enable all participants to enhance their fishing experience by having a historical database that will allow them to prepare adequately for future trips.
   
 F.Aze was born when my friend, an expert fisherman, and I, a complete novice, embarked on a 45 minute drive to Monument Lake. After arriving, we trekked across the perilous ice to set up our base camp from which we would ice fish. Every aspect was covered, food, chairs, rods, music, heater, drill, or so we thought. After an hour or so of hit after hit, fish after fish, catch after catch, we ran out of bait. No more mealworms, no more waxworms, no more lures, nothing to entice the trout to bite our rods. Suddenly the weather became colder, our feet got wetter, and our experience worse. If only we had prepared adequately. A torrential flow of “should haves”, “would haves”, and “could haves” spilled out of our mouths as we pitifully gathered up our belonging to drive back home.
