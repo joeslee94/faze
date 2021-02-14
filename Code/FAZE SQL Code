@@ -1,0 +1,106 @@
+-----------------------------
+--Birth of the server
+-----------------------------
+USE MASTER;
+GO 
+-- Drop database
+IF DB_ID(N'FAZE') IS NOT NULL DROP DATABASE FAZE;
+
+-- If database could not be created due to open connections, abort
+IF @@ERROR = 3702 
+   RAISERROR(N'Database cannot be dropped because there are still open connections.', 127, 127) WITH NOWAIT, LOG;
+
+-- Create database
+CREATE DATABASE FAZE;
+GO
+
+-- Use Faze
+USE FAZE;
+GO
+
+-----------------------------
+--Schema Creation
+-----------------------------
+CREATE SCHEMA faze AUTHORIZATION dbo;
+GO
+
+CREATE SCHEMA trip AUTHORIZATION dbo;
+GO
+
+CREATE SCHEMA fish AUTHORIZATION dbo;
+GO
+
+CREATE SCHEMA bait AUTHORIZATION dbo;
+GO
+
+
+-----------------------------
+--Table Creation
+-----------------------------
+CREATE TABLE faze.userinfo
+(
+username       NVARCHAR(30) NOT NULL,
+email          NVARCHAR(30) NOT NULL,
+password       NVARCHAR(30) NOT NULL,
+nameinitials   NVARCHAR(5)  NOT NULL,
+--Also want to create a field where it isn't shown to the user, but autoincrements them
+--first person to sign up is 1, second 2, etc.
+--Constraints
+CONSTRAINT PK_userinfo PRIMARY KEY(username)
+);
+GO
+
+CREATE TABLE trip.fishing
+(
+tripnumber       INT          NOT NULL IDENTITY,
+datetimeoftrip   DATETIME     NOT NULL,
+timestart        TIME(0)      NOT NULL,
+timespent        DECIMAL(4,2) NOT NULL,
+triplocation     NVARCHAR(30) NOT NULL,
+totalfish        INT          NOT NULL,
+bites            INT          NULL,
+baitused         INT          NULL,
+moonphase        NVARCHAR(10) NULL,
+tide             NVARCHAR(10) NULL,
+season           NVARCHAR(5)  NULL,
+avgtemp          DECIMAL(3,1) NULL,
+weathercond      NVARCHAR(50) NULL,
+comments         NVARCHAR(80) NULL,
+username         NVARCHAR(30) NOT NULL,
+
+CONSTRAINT PK_caught PRIMARY KEY(datetimeoftrip),
+CONSTRAINT FK_faze_userinfo FOREIGN KEY(username)
+	REFERENCES faze.userinfo(username)
+);
+GO
+
+CREATE TABLE fish.caught
+(
+fishid           INT          NOT NULL IDENTITY,
+fishtype         NVARCHAR(30) NOT NULL,
+baitluretype     NVARCHAR(30) NULL,
+baitlurecolor    NVARCHAR(30) NULL,
+rodbrand         NVARCHAR(30) NULL,
+timecaught       TIME(0)      NULL,
+fishweight       DECIMAL(6,3) NULL,
+fishlength       DECIMAL(6,3) NULL,
+datetimeoftrip   DATETIME     NOT NULL,
+
+CONSTRAINT PK_caught PRIMARY KEY(fishid),
+CONSTRAINT FK_trip_fishing FOREIGN KEY(datetimeoftrip)
+	REFERENCES trip.fishing(datetimeoftrip)
+);
+GO
+
+CREATE TABLE bait.used
+(
+baitname           NVARCHAR(30) NOT NULL,
+fishcaughtbybait   INT          NOT NULL,
+priceperpkg        MONEY        NULL,
+datetimeoftrip     DATETIME     NOT NULL,
+
+CONSTRAINT PK_caught PRIMARY KEY(baitname),
+CONSTRAINT FK_trip_fishing FOREIGN KEY(datetimeoftrip)
+	REFERENCES trip.fishing(datetimeoftrip)
+);
+GO
