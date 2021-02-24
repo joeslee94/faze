@@ -14,3 +14,4 @@ Overall, this design of the database is used to create data for the user in orde
 - [Chart Diagram 1.0](.Initial%20Chart%20for%20Faze.md)
 - [Chart Diagram 1.2](..Secondary%20Chart%20for%20Faze.pdf)
 - [T-SQL Database Code](Code/FAZE%20SQL%20Code)
+- [Wireframe 1.0](...Initial%20FAZE%20Wireframe.pdf)
