@@ -1,8 +1,8 @@
 -----------------------------
 --Birth of the server
 -----------------------------
---USE MASTER;
---GO 
+USE MASTER;
+GO 
 
 -- Drop database
 --IF DB_ID(N'FAZE') IS NOT NULL DROP DATABASE FAZE;
@@ -43,13 +43,13 @@ GO
 -----------------------------
 CREATE TABLE faze.userinfo
 (
-userid             INT          NOT NULL IDENTITY(1,1),
-username           NVARCHAR(30) NOT NULL,
-email              NVARCHAR(30) NOT NULL,
-password           NVARCHAR(30) NOT NULL,
-usernameinitials   NVARCHAR(5)  NOT NULL,
+	userid             INT          NOT NULL IDENTITY(1,1),
+	username           NVARCHAR(30) NOT NULL,
+	email              NVARCHAR(30) NOT NULL,
+	password           NVARCHAR(30) NOT NULL,
+	usernameinitials   NVARCHAR(5)  NOT NULL,
 
-CONSTRAINT PK_faze_userinfo PRIMARY KEY(username)
+	CONSTRAINT PK_faze_userinfo PRIMARY KEY(username)
 );
 
 CREATE NONCLUSTERED INDEX idx_nc_FazeUserID ON faze.userinfo(userid);
@@ -58,25 +58,25 @@ GO
 
 CREATE TABLE trip.fishing
 (
-tripnumber       INT          NOT NULL IDENTITY (1, 1),
-dateoftrip       DATE         NOT NULL,
-timestart        TIME         NOT NULL,
-timespent        DECIMAL(4,2) NOT NULL,
-triplocation     NVARCHAR(30) NOT NULL,
-totalfish        INT          NOT NULL,
-bites            INT          NULL,
-numofbaitused    INT          NULL,
-moonphase        NVARCHAR(10) NULL,
-tide             NVARCHAR(10) NULL,
-season           NVARCHAR(5)  NULL,
-avgtemp          DECIMAL(3,1) NULL,
-weathercond      NVARCHAR(50) NULL,
-comments         NVARCHAR(80) NULL,
-username         NVARCHAR(30) NOT NULL,
+	tripnumber       INT          NOT NULL IDENTITY (1, 1),
+	dateoftrip       DATE         NOT NULL,
+	timestart        TIME         NOT NULL,
+	timespent        DECIMAL(4,2) NOT NULL,
+	triplocation     NVARCHAR(30) NOT NULL,
+	totalfish        INT          NOT NULL,
+	bites            INT          NULL,
+	numofbaitused    INT          NULL,
+	moonphase        NVARCHAR(10) NULL,
+	tide             NVARCHAR(10) NULL,
+	season           NVARCHAR(5)  NULL,
+	avgtemp          DECIMAL(3,1) NULL,
+	weathercond      NVARCHAR(50) NULL,
+	comments         NVARCHAR(80) NULL,
+	username         NVARCHAR(30) NOT NULL,
 
-CONSTRAINT PK_trip_fishing PRIMARY KEY(dateoftrip),
-CONSTRAINT FK_faze_userinfo FOREIGN KEY(username)
-	REFERENCES faze.userinfo(username)
+	CONSTRAINT PK_trip_fishing PRIMARY KEY(dateoftrip),
+	CONSTRAINT FK_faze_userinfo FOREIGN KEY(username)
+		REFERENCES faze.userinfo(username)
 );
 
 CREATE NONCLUSTERED INDEX idx_nc_TripNumber ON trip.fishing(tripnumber);
@@ -90,19 +90,19 @@ GO
 
 CREATE TABLE fish.caught
 (
-fishid           INT          NOT NULL IDENTITY (1,1),
-fishtype         NVARCHAR(30) NOT NULL,
-baitluretype     NVARCHAR(30) NULL,
-baitlurecolor    NVARCHAR(30) NULL,
-rodbrand         NVARCHAR(30) NULL,
-timecaught       TIME(0)      NULL,
-fishweight       DECIMAL(6,3) NULL,
-fishlength       DECIMAL(6,3) NULL,
-dateoftrip       DATE         NOT NULL,
+	fishid           INT          NOT NULL IDENTITY (1,1),
+	fishtype         NVARCHAR(30) NOT NULL,
+	baitluretype     NVARCHAR(30) NULL,
+	baitlurecolor    NVARCHAR(30) NULL,
+	rodbrand         NVARCHAR(30) NULL,
+	timecaught       TIME(0)      NULL,
+	fishweight       DECIMAL(6,3) NULL,
+	fishlength       DECIMAL(6,3) NULL,
+	dateoftrip       DATE         NOT NULL,
 
-CONSTRAINT PK_caught PRIMARY KEY(fishid),
-CONSTRAINT FK_trip_fishing FOREIGN KEY(dateoftrip)
-	REFERENCES trip.fishing(dateoftrip)
+	CONSTRAINT PK_caught PRIMARY KEY(fishid),
+	CONSTRAINT FK_trip_fishing FOREIGN KEY(dateoftrip)
+		REFERENCES trip.fishing(dateoftrip)
 );
 
 CREATE NONCLUSTERED INDEX idx_nc_FishID ON fish.caught(fishid);
@@ -115,15 +115,15 @@ GO
 
 CREATE TABLE bait.used
 (
+	baitname           NVARCHAR(30) NOT NULL,
+	fishcaughtbybait   INT          NOT NULL,
+	priceperpkg        MONEY        NOT NULL,
+	unitperpkg         INT          NOT NULL,
+	dateoftrip         DATE         NOT NULL,
 
-baitname           NVARCHAR(30) NOT NULL,
-fishcaughtbybait   INT          NOT NULL,
-priceperpkg        MONEY        NULL,
-dateoftrip         DATE         NOT NULL,
-
-CONSTRAINT PK_caught PRIMARY KEY(baitname, dateoftrip),
-CONSTRAINT FK_trip_fishing FOREIGN KEY(dateoftrip)
-	REFERENCES trip.fishing(dateoftrip)
+	CONSTRAINT PK_caught PRIMARY KEY(baitname, dateoftrip),
+	CONSTRAINT FK_trip_fishing FOREIGN KEY(dateoftrip)
+		REFERENCES trip.fishing(dateoftrip)  
 );
 GO
 
@@ -144,48 +144,53 @@ GO
 -----------------------------
 
 --faze.userinfo(userid, username, email, password, nameinitials)
-INSERT INTO faze.userinfo VALUES('joeslee',  'joeslee94@outlook.com',  'password1', 'SL1');
-INSERT INTO faze.userinfo VALUES('joeslee1', 'joeslee941@outlook.com', 'password2', 'SL2');
-INSERT INTO faze.userinfo VALUES('joeslee2', 'joeslee942@outlook.com', 'password3', 'SL3');
-INSERT INTO faze.userinfo VALUES('joeslee3', 'joeslee943@outlook.com', 'password4', 'SL4');
+INSERT INTO faze.userinfo
+	VALUES('joeslee',  'joeslee94@outlook.com',  'password1', 'SL1');
+INSERT INTO faze.userinfo
+	VALUES('joeslee1', 'joeslee941@outlook.com', 'password2', 'SL2');
+INSERT INTO faze.userinfo
+	VALUES('joeslee2', 'joeslee942@outlook.com', 'password3', 'SL3');
+INSERT INTO faze.userinfo
+	VALUES('joeslee3', 'joeslee943@outlook.com', 'password4', 'SL4');
 GO
 
 --trip.fishing(tripnumber/dateoftrip/timestart/timespent/triplocation/totalfish/bites/numofbaitused/moonphase/tide/season/avgtemp/weathercond/comments/username)
 INSERT INTO trip.fishing(timespent, triplocation, totalfish, bites, numofbaitused, moonphase, tide, season, avgtemp, weathercond, comments, username)
-VALUES(05.45, 'Monument Lake', 4, 10, 20, 'Wax Cresc', 'Low', 'Wint', 32.2, 'Cold', 'Bring shelter next time for trip', 'joeslee');
+	VALUES(05.45, 'Monument Lake', 4, 10, 20, 'Wax Cresc', 'Low', 'Wint', 32.2, 'Cold', 'Bring shelter next time for trip', 'joeslee');
 
 INSERT INTO trip.fishing(dateoftrip, timespent, triplocation, totalfish, bites, numofbaitused, moonphase, tide, season, avgtemp, weathercond, comments, username)
-VALUES('2021-02-14', 05.45, 'Monument Lake', 4, 4, 6, 'Wax Cresc', 'Low', 'Wint', 32.2, 'Cold', 'Bring shelter next time for trip', 'joeslee');
+	VALUES('2021-02-14', 05.45, 'Monument Lake', 4, 4, 6, 'Wax Cresc', 'Low', 'Wint', 32.2, 'Cold', 'Bring shelter next time for trip', 'joeslee');
 GO
 
 --fish.caught(fishid, fishtype, baitluretype, baitlurecolor, rodbrand, timecaught, fishweight, fishlength, datetimeoftrip)
 INSERT INTO fish.caught(fishtype, baitluretype, baitlurecolor, rodbrand, timecaught, fishweight, fishlength, dateoftrip)
-VALUES('Rainbow Trout', 'Mealworm', 'Gold', 'Cabelas', '12:07', 3.56, 11.24, DEFAULT);
+	VALUES('Rainbow Trout', 'Mealworm', 'Gold', 'Cabelas', '12:07', 3.56, 11.24, DEFAULT);
 INSERT INTO fish.caught(fishtype, baitluretype, baitlurecolor, rodbrand, timecaught, fishweight, fishlength, dateoftrip)
-VALUES('Rainbow Trout', 'Mealworm', 'Gold', 'Cabelas', '12:10', 3.45, 11.34, DEFAULT);
+	VALUES('Rainbow Trout', 'Mealworm', 'Gold', 'Cabelas', '12:10', 3.45, 11.34, DEFAULT);
 INSERT INTO fish.caught(fishtype, baitluretype, baitlurecolor, rodbrand, timecaught, fishweight, fishlength, dateoftrip)
-VALUES('Rainbow Trout', 'Mealworm', 'Gold', 'Cabelas', '12:40', 3.46, 12.3, DEFAULT);
+	VALUES('Rainbow Trout', 'Mealworm', 'Gold', 'Cabelas', '12:40', 3.46, 12.3, DEFAULT);
 INSERT INTO fish.caught(fishtype, baitluretype, baitlurecolor, rodbrand, timecaught, fishweight, fishlength, dateoftrip)
-VALUES('Rainbow Trout', 'Mealworm', 'Gold', 'Cabelas', '13:07', 3.6, 12.4, DEFAULT);
+	VALUES('Rainbow Trout', 'Mealworm', 'Gold', 'Cabelas', '13:07', 3.6, 12.4, DEFAULT);
 
 INSERT INTO fish.caught(fishtype, baitluretype, baitlurecolor, rodbrand, timecaught, fishweight, fishlength, dateoftrip)
-VALUES('Cutthroat Trout', 'Waxworm', 'Gold', 'Cabelas', '12:07', 3.56, 11.24, '2021-02-14');
+	VALUES('Cutthroat Trout', 'Waxworm', 'Gold', 'Cabelas', '12:07', 3.56, 11.24, '2021-02-14');
 INSERT INTO fish.caught(fishtype, baitluretype, baitlurecolor, rodbrand, timecaught, fishweight, fishlength, dateoftrip)
-VALUES('Rainbow Trout', 'Waxworm', 'Gold', 'Cabelas', '12:10', 3.45, 11.34, '2021-02-14');
+	VALUES('Rainbow Trout', 'Waxworm', 'Gold', 'Cabelas', '12:10', 3.45, 11.34, '2021-02-14');
 INSERT INTO fish.caught(fishtype, baitluretype, baitlurecolor, rodbrand, timecaught, fishweight, fishlength, dateoftrip)
-VALUES('Bluegill', 'Mealworm', 'Pink', 'Extreme', '12:40', 3.46, 12.3, '2021-02-14');
+	VALUES('Bluegill', 'Mealworm', 'Pink', 'Extreme', '12:40', 3.46, 12.3, '2021-02-14');
 INSERT INTO fish.caught(fishtype, baitluretype, baitlurecolor, rodbrand, timecaught, fishweight, fishlength, dateoftrip)
-VALUES('Rainbow Trout', 'Mealworm', 'Pink', 'Extreme', '13:07', 3.6, 12.4, '2021-02-14');
+	VALUES('Rainbow Trout', 'Mealworm', 'Pink', 'Extreme', '13:07', 3.6, 12.4, '2021-02-14');
 GO
 
 --bait.used(baitname, fishcaughtbybait, priceperpkg, dateoftrip)
 INSERT INTO bait.used(baitname, fishcaughtbybait, priceperpkg, dateoftrip)
-VALUES('Mealworm', 4, 5, DEFAULT);
+	VALUES('Mealworm', 4, 5, DEFAULT);
+GO
 
 INSERT INTO bait.used(baitname, fishcaughtbybait, priceperpkg, dateoftrip)
-VALUES('Mealworm', 2, 4, '2021-02-14');
+	VALUES('Mealworm', 2, 4, '2021-02-14');
 INSERT INTO bait.used(baitname, fishcaughtbybait, priceperpkg, dateoftrip)
-VALUES('Waxworm', 2, 3, '2021-02-14');
+	VALUES('Waxworm', 2, 3, '2021-02-14');
 GO
 
 -----------------------------
