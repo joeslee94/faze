@@ -11,7 +11,16 @@ Thus, F.Aze will ultimately help its users prepare in totality for their fishing
 Overall, this design of the database is used to create data for the user in order for them to have a better future fishing experience. Ultimately, like Waze, which is a collaborative effort to inform its users about speed traps, I would like for this application to go live using a map to indicate where people got the most bites so that others can share in that experience for fishing. It will also allow adventurous people to head exploration efforts, while those that are getting started in their fishing journey can use historically well-known sites.
 
 # Links to Project Items
-- [Chart Diagram 1.0](.Initial%20Chart%20for%20Faze.md)
-- [Chart Diagram 1.2](..Secondary%20Chart%20for%20Faze.pdf)
+### Chart Layout
+- [Initial Chart Layout](FAZE%20Initial%20Chart%20Layout.md)
+
+### Chart Diagrams
+- [Initial Chart Diagram](Chart%20Diagrams/Faze%20Chart%20Diagram%201.0.pdf)
+- [Finalized Chart Diagram](Chart%20Diagrams/Faze%20Chart%20Diagram%202.0.pdf)
+
+### Wireframes
+- [Inital Wireframe](WireFrames/FAZE%20Wireframe%201.0.pdf)
+- [Secondary Wireframe](WireFrames/FAZE%20Wireframe%201.1.pdf)
+
+### Code
 - [T-SQL Database Code](Code/FAZE%20SQL%20Code)
-- [Wireframe 1.0](...Initial%20FAZE%20Wireframe.pdf)
