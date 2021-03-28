@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+
+<style>
+    input.largerLoginButton {
+        color: dodgerblue;
+        border-style: outset;
+        border-color: dodgerblue;
+        height: 100px;
+        font-size: 30px;
+        font-style: italic;
+        font-weight: bold;
+        width: 300px;
+    }
+</style>
+
+
+<h1>Welcome Back</h1>
+<form>
+    <br />
+
+    <div>
+        <label>Username</label><br />
+        <input type="text" id="username" name="username" placeholder="Enter in a Username" />
+    </div> <br />
+
+    <div>
+        <label>Password</label><br />
+        <input type="text" id="password" name="password" placeholder="Enter in a Password" />
+    </div> <br />
+
+    <div>
+        <input type="submit" id="signup" name="signup" value="Login" class="largerLoginButton" />
+    </div> <br />
+
+    <div>
+        @Html.ActionLink("Forgot Username or Password?", "ForgotUsernamePassword", "Home", null, new { @class = "page-scroll" })
+    </div>
+</form>
+ 

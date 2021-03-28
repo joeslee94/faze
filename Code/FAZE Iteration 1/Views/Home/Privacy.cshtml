@@ -1,0 +1,989 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Use this page to detail your site's privacy policy.</p>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <style id="applicationStylesheet" type="text/css">
+        .mediaViewInfo {
+            --web-view-name: SIGN-UP PAGE;
+            --web-view-id: SIGN-UP_PAGE;
+            --web-scale-on-resize: true;
+            --web-enable-deep-linking: true;
+        }
+
+        :root {
+            --web-view-ids: SIGN-UP_PAGE;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border: none;
+        }
+
+        #SIGN-UP_PAGE {
+            position: absolute;
+            width: 1920px;
+            height: 1080px;
+            background-color: rgba(255,255,255,1);
+            overflow: hidden;
+            --web-view-name: SIGN-UP PAGE;
+            --web-view-id: SIGN-UP_PAGE;
+            --web-scale-on-resize: true;
+            --web-enable-deep-linking: true;
+        }
+
+        #Nav {
+            position: absolute;
+            width: 1920px;
+            height: 53px;
+            left: 0px;
+            top: 0px;
+            overflow: visible;
+        }
+
+        #Base {
+            fill: rgba(38,153,251,1);
+        }
+
+        .Base {
+            position: absolute;
+            overflow: visible;
+            width: 1920px;
+            height: 53px;
+            left: 0px;
+            top: 0px;
+        }
+
+        #FEED {
+            left: 1544px;
+            top: 22px;
+            position: absolute;
+            overflow: visible;
+            width: 28px;
+            white-space: nowrap;
+            line-height: 12px;
+            margin-top: -1px;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 10px;
+            color: rgba(255,255,255,1);
+        }
+
+        #RECOMMENDED_ITEMS {
+            left: 1621px;
+            top: 21px;
+            position: absolute;
+            overflow: visible;
+            width: 115px;
+            white-space: nowrap;
+            line-height: 12px;
+            margin-top: -1px;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 10px;
+            color: rgba(255,255,255,1);
+        }
+
+        #EXPLORE_AREAS {
+            left: 1785px;
+            top: 21px;
+            position: absolute;
+            overflow: visible;
+            width: 86px;
+            white-space: nowrap;
+            line-height: 12px;
+            margin-top: -1px;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 10px;
+            color: rgba(255,255,255,1);
+        }
+
+        #FAZE {
+            left: 30px;
+            top: 5px;
+            position: absolute;
+            overflow: visible;
+            width: 82px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Segoe UI;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 32px;
+            color: rgba(255,255,255,1);
+        }
+
+        #Footer {
+            position: absolute;
+            width: 1918px;
+            height: 50px;
+            left: 0px;
+            top: 1030px;
+            overflow: visible;
+        }
+
+        #Base_ {
+            fill: rgba(38,153,251,1);
+        }
+
+        .Base_ {
+            position: absolute;
+            overflow: visible;
+            width: 1800px;
+            height: 50px;
+            left: 0px;
+            top: 0px;
+        }
+
+        #Base_ba {
+            fill: rgba(127,196,253,1);
+        }
+
+        .Base_ba {
+            position: absolute;
+            overflow: visible;
+            width: 120px;
+            height: 50px;
+            left: 1798px;
+            top: 0px;
+        }
+
+        #links {
+            position: absolute;
+            width: 220px;
+            height: 11px;
+            left: 848px;
+            top: 20px;
+            overflow: visible;
+        }
+
+        #ABOUT {
+            left: 0px;
+            top: 0px;
+            position: absolute;
+            overflow: visible;
+            width: 37px;
+            white-space: nowrap;
+            line-height: 26px;
+            margin-top: -8px;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 10px;
+            color: rgba(247,247,247,1);
+        }
+
+        #PROFILE {
+            left: 86px;
+            top: 0px;
+            position: absolute;
+            overflow: visible;
+            width: 44px;
+            white-space: nowrap;
+            line-height: 26px;
+            margin-top: -8px;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 10px;
+            color: rgba(247,247,247,1);
+        }
+
+        #GO_FISH {
+            left: 179px;
+            top: 0px;
+            position: absolute;
+            overflow: visible;
+            width: 42px;
+            white-space: nowrap;
+            line-height: 26px;
+            margin-top: -8px;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 10px;
+            color: rgba(247,247,247,1);
+        }
+
+        #Component {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            left: 1850px;
+            top: 17px;
+            overflow: visible;
+        }
+
+        #Path_10 {
+            fill: rgba(255,255,255,1);
+        }
+
+        .Path_10 {
+            overflow: visible;
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            transform: translate(0px, 0px) matrix(1,0,0,1,0,0) rotate(-90deg);
+            transform-origin: center;
+            left: 0px;
+            top: 0px;
+        }
+
+        #FAZE_bi {
+            left: 28px;
+            top: 4px;
+            position: absolute;
+            overflow: visible;
+            width: 82px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Segoe UI;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 32px;
+            color: rgba(255,255,255,1);
+        }
+
+        #Footer_ {
+            position: absolute;
+            width: 1920px;
+            height: 50px;
+            left: 0px;
+            top: 1030px;
+            overflow: visible;
+        }
+
+        #Base_bb {
+            fill: rgba(38,153,251,1);
+        }
+
+        .Base_bb {
+            position: absolute;
+            overflow: visible;
+            width: 1802px;
+            height: 50px;
+            left: 0px;
+            top: 0px;
+        }
+
+        #Base_bc {
+            fill: rgba(127,196,253,1);
+        }
+
+        .Base_bc {
+            position: absolute;
+            overflow: visible;
+            width: 120px;
+            height: 50px;
+            left: 1800px;
+            top: 0px;
+        }
+
+        #links_bc {
+            position: absolute;
+            width: 220px;
+            height: 11px;
+            left: 849px;
+            top: 20px;
+            overflow: visible;
+        }
+
+        #ABOUT_bd {
+            left: 0px;
+            top: 0px;
+            position: absolute;
+            overflow: visible;
+            width: 37px;
+            white-space: nowrap;
+            line-height: 26px;
+            margin-top: -8px;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 10px;
+            color: rgba(247,247,247,1);
+        }
+
+        #PROFILE_be {
+            left: 86px;
+            top: 0px;
+            position: absolute;
+            overflow: visible;
+            width: 44px;
+            white-space: nowrap;
+            line-height: 26px;
+            margin-top: -8px;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 10px;
+            color: rgba(247,247,247,1);
+        }
+
+        #GO_FISH_bf {
+            left: 179px;
+            top: 0px;
+            position: absolute;
+            overflow: visible;
+            width: 42px;
+            white-space: nowrap;
+            line-height: 26px;
+            margin-top: -8px;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 10px;
+            color: rgba(247,247,247,1);
+        }
+
+        #Component_bg {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            left: 1852px;
+            top: 17px;
+            overflow: visible;
+        }
+
+        #Path_10_bh {
+            fill: rgba(255,255,255,1);
+        }
+
+        .Path_10_bh {
+            overflow: visible;
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            transform: translate(0px, 0px) matrix(1,0,0,1,0,0) rotate(-90deg);
+            transform-origin: center;
+            left: 0px;
+            top: 0px;
+        }
+
+        #FAZE_bi {
+            left: 28px;
+            top: 4px;
+            position: absolute;
+            overflow: visible;
+            width: 82px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Segoe UI;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 32px;
+            color: rgba(255,255,255,1);
+        }
+
+        #Image_Thumbnail {
+            position: absolute;
+            width: 960px;
+            height: 977px;
+            left: 960px;
+            top: 53px;
+            overflow: visible;
+        }
+
+        #Image {
+            position: absolute;
+            width: 960px;
+            height: 977px;
+            left: 0px;
+            top: 0px;
+            overflow: visible;
+        }
+
+        #base {
+            fill: rgba(188,224,253,1);
+        }
+
+        .base {
+            position: absolute;
+            overflow: visible;
+            width: 960px;
+            height: 100px;
+            left: 0px;
+            top: 0px;
+        }
+
+        #Header {
+            position: absolute;
+            width: 190px;
+            height: 40px;
+            left: 30px;
+            top: 30px;
+            overflow: visible;
+        }
+
+        #webpage {
+            left: 26px;
+            top: 24px;
+            position: absolute;
+            overflow: visible;
+            width: 58px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            color: rgba(38,153,251,1);
+        }
+
+        #Component_bo {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            left: 0px;
+            top: 24px;
+            overflow: visible;
+        }
+
+        #Path_4 {
+            fill: rgba(38,153,251,1);
+        }
+
+        .Path_4 {
+            overflow: visible;
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            left: 0px;
+            top: 0px;
+            transform: matrix(1,0,0,1,0,0);
+        }
+
+        #PICTURE_OF_FISHING_SITES {
+            left: 0px;
+            top: 0px;
+            position: absolute;
+            overflow: visible;
+            width: 191px;
+            white-space: nowrap;
+            line-height: 24px;
+            margin-top: -5px;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            color: rgba(38,153,251,1);
+        }
+
+        #Name {
+            position: absolute;
+            width: 360px;
+            height: 74px;
+            left: 255px;
+            top: 280px;
+            overflow: visible;
+        }
+
+        #Rectangle_598 {
+            fill: rgba(241,249,255,1);
+            stroke: rgba(188,224,253,1);
+            stroke-width: 2px;
+            stroke-linejoin: miter;
+            stroke-linecap: butt;
+            stroke-miterlimit: 4;
+            shape-rendering: auto;
+        }
+
+        .Rectangle_598 {
+            position: absolute;
+            overflow: visible;
+            width: 360px;
+            height: 50px;
+            left: 0px;
+            top: 24px;
+        }
+
+        #JDrizzle {
+            left: 19px;
+            top: 41px;
+            position: absolute;
+            overflow: visible;
+            width: 51px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            color: rgba(38,153,251,1);
+        }
+
+        #Username {
+            left: 0px;
+            top: 0px;
+            position: absolute;
+            overflow: visible;
+            width: 69px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            color: rgba(38,153,251,1);
+        }
+
+        #Email {
+            position: absolute;
+            width: 360px;
+            height: 106px;
+            left: 255px;
+            top: 498px;
+            overflow: visible;
+        }
+
+        #Rectangle_599 {
+            fill: rgba(241,249,255,1);
+            stroke: rgba(188,224,253,1);
+            stroke-width: 2px;
+            stroke-linejoin: miter;
+            stroke-linecap: butt;
+            stroke-miterlimit: 4;
+            shape-rendering: auto;
+        }
+
+        .Rectangle_599 {
+            position: absolute;
+            overflow: visible;
+            width: 360px;
+            height: 50px;
+            left: 0px;
+            top: 56px;
+        }
+
+        #JohnDoesomethingmailcom {
+            left: 19px;
+            top: 73px;
+            position: absolute;
+            overflow: visible;
+            width: 192px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            color: rgba(38,153,251,1);
+        }
+
+        #E-mail_FAZE_promises_to_send_n {
+            left: 0px;
+            top: 0px;
+            position: absolute;
+            overflow: visible;
+            width: 355px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            color: rgba(38,153,251,1);
+        }
+        
+        #Sign_Up {
+            left: 255px;
+            top: 150px;
+            position: absolute;
+            overflow: visible;
+            width: 270px;
+            white-space: nowrap;
+            line-height: 64px;
+            margin-top: -2px;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 60px;
+            color: rgba(0,0,0,1);
+        }
+
+        #Name_b {
+            position: absolute;
+            width: 360px;
+            height: 74px;
+            left: 255px;
+            top: 639px;
+            overflow: visible;
+        }
+
+        #Rectangle_598_b {
+            fill: rgba(241,249,255,1);
+            stroke: rgba(188,224,253,1);
+            stroke-width: 2px;
+            stroke-linejoin: miter;
+            stroke-linecap: butt;
+            stroke-miterlimit: 4;
+            shape-rendering: auto;
+        }
+
+        .Rectangle_598_b {
+            position: absolute;
+            overflow: visible;
+            width: 360px;
+            height: 50px;
+            left: 0px;
+            top: 24px;
+        }
+
+        #JD {
+            left: 19px;
+            top: 41px;
+            position: absolute;
+            overflow: visible;
+            width: 18px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            color: rgba(38,153,251,1);
+        }
+
+        #Your_Initials {
+            left: 0px;
+            top: 0px;
+            position: absolute;
+            overflow: visible;
+            width: 80px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            color: rgba(38,153,251,1);
+        }
+
+        #Group_327 {
+            position: absolute;
+            width: 360px;
+            height: 144px;
+            left: 255px;
+            top: 833px;
+            overflow: visible;
+        }
+
+        #Rectangle_1 {
+            fill: transparent;
+            stroke: rgba(1,1,1,1);
+            stroke-width: 2px;
+            stroke-linejoin: miter;
+            stroke-linecap: butt;
+            stroke-miterlimit: 4;
+            shape-rendering: auto;
+        }
+
+        .Rectangle_1 {
+            position: absolute;
+            overflow: visible;
+            width: 360px;
+            height: 144px;
+            left: 0px;
+            top: 0px;
+        }
+
+        #SIGN_UP {
+            left: 104px;
+            top: 54px;
+            position: absolute;
+            overflow: visible;
+            width: 145px;
+            white-space: nowrap;
+            line-height: 42px;
+            margin-top: -3.5px;
+            text-align: center;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 35px;
+            color: rgba(0,0,0,1);
+        }
+
+        #Name_ca {
+            position: absolute;
+            width: 360px;
+            height: 74px;
+            left: 255px;
+            top: 389px;
+            overflow: visible;
+        }
+
+        #Rectangle_598_ca {
+            fill: rgba(241,249,255,1);
+            stroke: rgba(188,224,253,1);
+            stroke-width: 2px;
+            stroke-linejoin: miter;
+            stroke-linecap: butt;
+            stroke-miterlimit: 4;
+            shape-rendering: auto;
+        }
+
+        .Rectangle_598_ca {
+            position: absolute;
+            overflow: visible;
+            width: 360px;
+            height: 50px;
+            left: 0px;
+            top: 24px;
+        }
+
+        # {
+            left: 19px;
+            top: 41px;
+            position: absolute;
+            overflow: visible;
+            width: 55px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            color: rgba(38,153,251,1);
+        }
+
+        #Password {
+            left: 0px;
+            top: 0px;
+            position: absolute;
+            overflow: visible;
+            width: 67px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            color: rgba(38,153,251,1);
+        }
+
+        #Toggle_-_Yes {
+            position: absolute;
+            width: 88px;
+            height: 40px;
+            left: 527px;
+            top: 748px;
+            overflow: visible;
+        }
+
+        #Rectangle_679 {
+            fill: rgba(38,153,251,1);
+        }
+
+        .Rectangle_679 {
+            position: absolute;
+            overflow: visible;
+            width: 88px;
+            height: 40px;
+            left: 0px;
+            top: 0px;
+        }
+
+        #Rectangle_680 {
+            fill: rgba(255,255,255,1);
+        }
+
+        .Rectangle_680 {
+            position: absolute;
+            overflow: visible;
+            width: 32px;
+            height: 32px;
+            left: 52px;
+            top: 4px;
+        }
+
+        #Group_88 {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            left: 18px;
+            top: 13px;
+            overflow: visible;
+        }
+
+        #Rectangle_460 {
+            fill: transparent;
+        }
+
+        .Rectangle_460 {
+            position: absolute;
+            overflow: visible;
+            width: 16px;
+            height: 16px;
+            left: 0px;
+            top: 0px;
+        }
+
+        #Checkbox {
+            fill: rgba(255,255,255,1);
+        }
+
+        .Checkbox {
+            overflow: visible;
+            position: absolute;
+            width: 16px;
+            height: 11.034px;
+            left: 0px;
+            top: 2px;
+            transform: matrix(1,0,0,1,0,0);
+        }
+
+        #Terms_of_ServiceAcceptable_Use {
+            left: 255px;
+            top: 758px;
+            position: absolute;
+            overflow: visible;
+            width: 266px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            color: rgba(38,153,251,1);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="SIGN-UP_PAGE">
+        <div id="Component_bg" class="Component">
+            <svg class="Path_10_bh" viewBox="0 0 16 16">
+                <path id="Path_10_bh" d="M 8 0 L 6.545454978942871 1.454545497894287 L 12.05194854736328 6.961039066314697 L 0 6.961039066314697 L 0 9.038961410522461 L 12.05194854736328 9.038961410522461 L 6.545454978942871 14.54545497894287 L 8 16 L 16 8 L 8 0 Z">
+                </path>
+            </svg>
+        </div>
+
+        <div id="Image_Thumbnail" class="Image_Thumbnail">
+            <img id="Image" src="Image.png" srcset="Image.png 1x, Image@2x.png 2x">
+
+            <svg class="base">
+                <rect id="base" rx="0" ry="0" x="0" y="0" width="960" height="100">
+                </rect>
+            </svg>
+            <div id="Header">
+                <div id="webpage">
+                    <span>webpage</span>
+                </div>
+                <div id="Component_bo" class="Component">
+                    <svg class="Path_4" viewBox="0 0 16 16">
+                        <path id="Path_4" d="M 2.400000095367432 2.400000095367432 C 3.866666793823242 0.8000000715255737 5.733333587646484 0 8 0 C 10.26666641235352 0 12.13333415985107 0.8000000715255737 13.60000038146973 2.400000095367432 C 15.19999980926514 3.866666793823242 16 5.733333587646484 16 8 C 16 10.26666641235352 15.19999980926514 12.13333415985107 13.60000038146973 13.60000038146973 C 12.13333415985107 15.19999980926514 10.26666641235352 16 8 16 C 5.733333587646484 16 3.866666793823242 15.19999980926514 2.400000333786011 13.60000038146973 C 0.9333337545394897 12 0 10.26666641235352 0 8 C 0 5.733333587646484 0.8000000715255737 3.866666793823242 2.400000095367432 2.400000095367432 Z M 9.066667556762695 14.40000057220459 C 9.600000381469727 14.40000057220459 10.26666736602783 14 11.0666675567627 13.20000076293945 C 11.60000038146973 12.26666641235352 12 11.33333396911621 12 10.40000057220459 C 12 9.733333587646484 11.73333358764648 9.200000762939453 11.33333396911621 8.80000114440918 C 10.80000114440918 8.266666412353516 10.26666641235352 8 9.600000381469727 8 L 8.266666412353516 8 C 7.866666793823242 8 7.466666698455811 7.866666793823242 7.066667079925537 7.733333587646484 C 6.800000190734863 7.466666698455811 6.666666984558105 7.200000286102295 6.666666984558105 6.800000190734863 C 6.666666984558105 6.533333778381348 6.800000190734863 6.399999618530273 6.933333396911621 6.266666412353516 C 7.066666603088379 6.133333206176758 7.333333492279053 6 7.466666698455811 6 C 7.599999904632568 6 8 6.133333206176758 8.133333206176758 6.40000057220459 C 8.40000057220459 6.533333778381348 8.533333778381348 6.666666984558105 8.666666984558105 6.666666984558105 C 8.800000190734863 6.666666984558105 9.066667556762695 6.666666984558105 9.200000762939453 6.533333778381348 C 9.333333969116211 6.40000057220459 9.333333969116211 6.133333206176758 9.333333969116211 6 C 9.333333969116211 5.599999904632568 9.066667556762695 5.066666603088379 8.666666984558105 4.666666984558105 C 9.066667556762695 3.866666793823242 9.333333969116211 3.066666603088379 9.333333969116211 2.133333444595337 C 9.333333969116211 2 9.200000762939453 1.866666674613953 9.066667556762695 1.866666674613953 C 8.666666984558105 1.733333349227905 8.266666412353516 1.600000143051147 8 1.600000143051147 C 6.533333778381348 1.733333349227905 5.466666698455811 2 4.533333778381348 2.666666746139526 C 3.733333349227905 3.333333492279053 3.333333492279053 4.266666889190674 3.333333492279053 5.333333492279053 C 3.333333492279053 6.40000057220459 3.733333349227905 7.200000286102295 4.400000095367432 7.866666793823242 C 5.066666603088379 8.533333778381348 6 8.933334350585938 6.933333396911621 8.933334350585938 L 6.933333396911621 8.933334350585938 C 6.933333396911621 9.066667556762695 6.933333396911621 9.333333969116211 6.933333396911621 9.466667175292969 C 6.933333396911621 10.00000095367432 7.066666603088379 10.40000057220459 7.466666698455811 10.80000114440918 C 7.733333110809326 11.20000076293945 8.133333206176758 11.46666717529297 8.666666984558105 11.60000133514404 L 8.666666984558105 14.00000190734863 C 8.666666984558105 14.13333511352539 8.666666984558105 14.13333511352539 8.800000190734863 14.26666831970215 C 8.933333396911621 14.40000057220459 8.933333396911621 14.40000057220459 9.066667556762695 14.40000057220459 Z">
+                        </path>
+                    </svg>
+                </div>
+                <div id="PICTURE_OF_FISHING_SITES">
+                    <span>PICTURE OF FISHING SITES</span>
+                </div>
+            </div>
+        </div>
+        <div id="Name">
+            <svg class="Rectangle_598">
+                <rect id="Rectangle_598" rx="10" ry="10" x="0" y="0" width="360" height="50">
+                </rect>
+            </svg>
+
+            <div id="Username">
+                <span>Username</span>
+            </div>
+        </div>
+        <div id="Email">
+            <svg class="Rectangle_599">
+                <rect id="Rectangle_599" rx="10" ry="10" x="0" y="0" width="360" height="50">
+                </rect>
+            </svg>
+
+            <div id="E-mail_FAZE_promises_to_send_n">
+                <span>E-mail<br />(FAZE promises to send no spam)<br />(This will exclusively be used for password recovery)</span>
+            </div>
+        </div>
+
+        <div id="Name_b">
+            <svg class="Rectangle_598_b">
+                <rect id="Rectangle_598_b" rx="10" ry="10" x="0" y="0" width="360" height="50">
+                </rect>
+            </svg>
+
+            <div id="Your_Initials">
+                <span>Your Initials</span>
+            </div>
+        </div>
+
+        <div id="Group_327">
+            <svg class="Rectangle_1">
+                <rect id="Rectangle_1" rx="4" ry="4" x="0" y="0" width="360" height="144">
+                </rect>
+            </svg>
+
+            <div id="SIGN_UP">
+                <span>SIGN UP</span>
+            </div>
+        </div>
+
+        <div id="Name_ca">
+            <svg class="Rectangle_598_ca">
+                <rect id="Rectangle_598_ca" rx="10" ry="10" x="0" y="0" width="360" height="50">
+                </rect>
+            </svg>
+
+            <div id="Password">
+                <span>Password</span>
+            </div>
+        </div>
+
+        <div id="Toggle_-_Yes" class="Toggle___Yes">
+            <svg class="Rectangle_679">
+                <rect id="Rectangle_679" rx="6" ry="6" x="0" y="0" width="88" height="40">
+                </rect>
+            </svg>
+
+            <svg class="Rectangle_680">
+                <rect id="Rectangle_680" rx="4" ry="4" x="0" y="0" width="32" height="32">
+                </rect>
+            </svg>
+            <div id="Group_88">
+                <svg class="Rectangle_460">
+                    <rect id="Rectangle_460" rx="0" ry="0" x="0" y="0" width="16" height="16">
+                    </rect>
+                </svg>
+                <svg class="Checkbox" viewBox="0 0 16 11.034">
+                    <path id="Checkbox" d="M 6.344827651977539 11.03448295593262 L 0 4.689655303955078 L 1.28735625743866 3.402298927307129 L 6.344827651977539 8.367815971374512 L 14.71264362335205 0 L 16 1.28735625743866 L 6.344827651977539 11.03448295593262 Z">
+                    </path>
+                </svg>
+            </div>
+        </div>
+        <div id="Terms_of_ServiceAcceptable_Use">
+            <span>Terms of Service/Acceptable Use Policy</span>
+        </div>
+    </div>
+</body>
+</html>

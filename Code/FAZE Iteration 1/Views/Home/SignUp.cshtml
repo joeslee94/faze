@@ -1,0 +1,60 @@
+﻿@{
+    ViewData["Title"] = "SignUp";
+}
+    
+<style>
+    input.largerCheckbox {
+        width: 30px;
+        height: 30px;
+    }
+    input.largerSubmitButton {
+        color: dodgerblue;
+        border-style: outset;
+        border-color: dodgerblue;
+        height: 100px;
+        font-size: 30px;
+        font-style: italic;
+        font-weight: bold;
+        width: 300px;
+    }
+    label.checkboxLabelVerticalCenter{
+        position: relative;
+        vertical-align: middle;
+        bottom: 5px;
+    }
+</style>
+
+
+<h1>Sign Up for FAZE!</h1>
+<form>
+    <br />
+
+    <div>
+        <label>Username</label><br />
+        <input type="text" id="username" name="username" placeholder="Enter in a Username" />
+    </div> <br />
+
+    <div>
+        <label>Password</label><br />
+        <input type="text" id="password" name="password" placeholder="Enter in a Password" />
+    </div> <br />
+
+    <div>
+        <label>Email (Will ONLY be used for recovery)</label><br />
+        <input type="text" id="Email" name="Email" placeholder="Enter in your Email" />
+    </div> <br />
+
+    <div>
+        <label>Your Initials (Will ONLY be used for recovery)</label><br />
+        <input type="text" id="Email" name="Email" placeholder="Enter in your Initials" />
+    </div> <br />
+
+    <div>
+        <label class="checkboxLabelVerticalCenter">Terms of Service/Acceptable Use Policy Agreement</label>
+        <input type="checkbox" id="TOSAUP" name="TOSAUP" class="largerCheckbox" />
+    </div> <br />
+
+    <div>
+        <input type="submit" id="signup" name="signup" value="Sign Up" class="largerSubmitButton" />
+    </div>
+</form>
