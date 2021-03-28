@@ -1,0 +1,107 @@
+﻿@model IEnumerable<FAZE.Models.FishingTrip>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Location)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StartTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TimeSpentFishing)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalFishCaught)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumOfBites)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumOfBaitUsed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Season)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AvgTemp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WeatherConditions)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MoonPhase)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tide)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Comments)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TimeSpentFishing)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalFishCaught)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumOfBites)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumOfBaitUsed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Season)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AvgTemp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WeatherConditions)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MoonPhase)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tide)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Comments)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
