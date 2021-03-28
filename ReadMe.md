@@ -24,3 +24,4 @@ Overall, this design of the database is used to create data for the user in orde
 
 ### Code
 - [T-SQL Database Code](Code/FAZE%20SQL%20Code)
+- [ASP.NET MVC Core Code](https://github.com/joeslee94/faze/tree/main/Code)
